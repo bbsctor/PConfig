@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9752764F-4BBF-411F-8E12-B8887182F6C9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PConfigUI</RootNamespace>
+    <AssemblyName>ProbeConfig</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>st.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfirmDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmDialog.Designer.cs">
+      <DependentUpon>ConfirmDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFrame.designer.cs">
+      <DependentUpon>MainFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProbeInfoDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProbeInfoDialog.designer.cs">
+      <DependentUpon>ProbeInfoDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SerialDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SerialDialog.designer.cs">
+      <DependentUpon>SerialDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIException\UIExceptionHandler.cs" />
+    <Compile Include="UIServiceImpl\UIClockService.cs" />
+    <Compile Include="UIServiceImpl\UICommonService.cs" />
+    <Compile Include="UIServiceImpl\UIConfigurationService.cs" />
+    <Compile Include="UIServiceImpl\UILoggerService.cs" />
+    <Compile Include="UIServiceImpl\UIModemService.cs" />
+    <Compile Include="UIServiceImpl\UINetworkService.cs" />
+    <Compile Include="UIServiceImpl\UIPowerService.cs" />
+    <Compile Include="UIServiceImpl\UIProbeInfoService.cs" />
+    <Compile Include="UIServiceImpl\UISensorTestService.cs" />
+    <Compile Include="UIServiceImpl\UISerialService.cs" />
+    <Compile Include="UITaskImpl\ModemTaskGroup.cs" />
+    <Compile Include="UITaskImpl\ProbeInfoTaskGroup.cs" />
+    <Compile Include="UITaskImpl\QueryConfigurationTaskGroup.cs" />
+    <Compile Include="UITaskImpl\QueryPowerTaskGroup.cs" />
+    <Compile Include="UITaskImpl\QueryTimeTaskGroup.cs" />
+    <Compile Include="UITaskImpl\ReadWriteTaskGroup.cs" />
+    <Compile Include="UITaskImpl\TestSensorTaskGroup.cs" />
+    <Compile Include="UIUtil\CfgFileAssistant.cs" />
+    <Compile Include="UIUtil\DataGridViewChangeAssitant.cs" />
+    <Compile Include="UIUtil\DecorateTextAssistor.cs" />
+    <Compile Include="UIUtil\DGVSequenceAssistant.cs" />
+    <Compile Include="UIUtil\DictionarySequenceAssistant.cs" />
+    <Compile Include="UIUtil\MultiChangeAssistor.cs" />
+    <Compile Include="UIUtil\SerializationAssistant.cs" />
+    <Compile Include="UIUtil\SingleChangeAssistor.cs" />
+    <Compile Include="URLEditDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="URLEditDialog.Designer.cs">
+      <DependentUpon>URLEditDialog.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ConfirmDialog.resx">
+      <DependentUpon>ConfirmDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFrame.resx">
+      <DependentUpon>MainFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProbeInfoDialog.resx">
+      <DependentUpon>ProbeInfoDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SerialDialog.resx">
+      <DependentUpon>SerialDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="URLEditDialog.resx">
+      <DependentUpon>URLEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\DataSources\PConfig.UserInterface.ViewModel.SensorViewModel.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConfigFrame\ConfigFrame.csproj">
+      <Project>{03BD87B8-1BD4-4969-9839-4DE7EFA65DE0}</Project>
+      <Name>ConfigFrame</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PConfigBase\PConfigBase.csproj">
+      <Project>{6D99BFF0-1E89-4B43-949C-9879CD092713}</Project>
+      <Name>PConfigBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PConfigFacade\PConfigFacade.csproj">
+      <Project>{786DBD78-5F35-4663-A463-9B0A55F09637}</Project>
+      <Name>PConfigFacade</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\water.ico" />
+    <None Include="Resources\other.ico" />
+    <Content Include="st.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

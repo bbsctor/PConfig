@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{01224924-9984-4113-A893-1FF81DC3D1C3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PConfigBase</RootNamespace>
+    <AssemblyName>PConfigBase</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppInterfaceImpl\ClockController.cs" />
+    <Compile Include="AppInterfaceImpl\CommonController.cs" />
+    <Compile Include="AppInterfaceImpl\ConfigurationController.cs" />
+    <Compile Include="AppInterfaceImpl\LoggerController.cs" />
+    <Compile Include="AppInterfaceImpl\ModemController.cs" />
+    <Compile Include="AppInterfaceImpl\NetworkController.cs" />
+    <Compile Include="AppInterfaceImpl\PowerController.cs" />
+    <Compile Include="AppInterfaceImpl\ProbeInfoController.cs" />
+    <Compile Include="AppInterfaceImpl\SensorTestController.cs" />
+    <Compile Include="AppInterfaceImpl\SerialController.cs" />
+    <Compile Include="BaseModelImpl\BaseDataModelImpl\ClockDataModel.cs" />
+    <Compile Include="BaseModelImpl\BaseDataModelImpl\LoggerDataModel.cs" />
+    <Compile Include="BaseModelImpl\BaseDataModelImpl\LoggerIDDataModel.cs" />
+    <Compile Include="BaseModelImpl\BaseDataModelImpl\ModemDataModel.cs" />
+    <Compile Include="BaseModelImpl\BaseDataModelImpl\NetworkDataModel.cs" />
+    <Compile Include="BaseModelImpl\BaseDataModelImpl\PowerDataModel.cs" />
+    <Compile Include="BaseModelImpl\BaseDataModelImpl\ProbeInfoDataModel.cs" />
+    <Compile Include="BaseModelImpl\BaseDataModelImpl\SensorDataModel.cs" />
+    <Compile Include="BaseModelImpl\BaseDataModelImpl\SensorListDataModel.cs" />
+    <Compile Include="BaseModelImpl\BaseDataModelImpl\ConnectDataModel.cs" />
+    <Compile Include="BaseModelImpl\BaseDataModelImpl\TimeDataModel.cs" />
+    <Compile Include="BaseModelImpl\BaseDataModelImpl\URLDataModel.cs" />
+    <Compile Include="BaseModelImpl\BaseMetaModelImpl\ClockMetaModel.cs" />
+    <Compile Include="BaseModelImpl\BaseMetaModelImpl\ConfigurationMetaModel.cs" />
+    <Compile Include="BaseModelImpl\BaseMetaModelImpl\LoggerMetaModel.cs" />
+    <Compile Include="BaseModelImpl\BaseMetaModelImpl\ModemMetaModel.cs" />
+    <Compile Include="BaseModelImpl\BaseMetaModelImpl\NetworkMetaModel.cs" />
+    <Compile Include="BaseModelImpl\BaseMetaModelImpl\PowerMetaModel.cs" />
+    <Compile Include="BaseModelImpl\BaseMetaModelImpl\ProbeInfoMetaModel.cs" />
+    <Compile Include="BaseModelImpl\BaseMetaModelImpl\TestMetaModel.cs" />
+    <Compile Include="BaseModelImpl\BaseViewModelImpl\LoggerViewModel.cs" />
+    <Compile Include="BaseModelImpl\BaseViewModelImpl\ModemViewModel.cs" />
+    <Compile Include="BaseModelImpl\BaseViewModelImpl\NetworkViewModel.cs" />
+    <Compile Include="BaseModelImpl\BaseViewModelImpl\PowerViewModel.cs" />
+    <Compile Include="BaseModelImpl\BaseViewModelImpl\ProbeInfoViewModel.cs" />
+    <Compile Include="BaseModelImpl\BaseViewModelImpl\SensorListViewModel.cs" />
+    <Compile Include="BaseModelImpl\BaseViewModelImpl\SensorViewModel.cs" />
+    <Compile Include="BaseModelImpl\BaseViewModelImpl\SerialViewModel.cs" />
+    <Compile Include="BaseModelImpl\BaseViewModelImpl\TimeViewModel.cs" />
+    <Compile Include="BaseModelImpl\BaseViewModelImpl\URLViewModel.cs" />
+    <Compile Include="BaseModelImpl\ModelConverterImpl\BaudRateConverter.cs" />
+    <Compile Include="BaseModelImpl\ModelConverterImpl\DateTimeConverter.cs" />
+    <Compile Include="BaseModelImpl\ModelConverterImpl\LoggerConverter.cs" />
+    <Compile Include="BaseModelImpl\ModelConverterImpl\ModemConverter.cs" />
+    <Compile Include="BaseModelImpl\ModelConverterImpl\NetworkConverter.cs" />
+    <Compile Include="BaseModelImpl\ModelConverterImpl\PowerConverter.cs" />
+    <Compile Include="BaseModelImpl\ModelConverterImpl\ProbeInfoConverter.cs" />
+    <Compile Include="BaseModelImpl\ModelConverterImpl\SensorConverter.cs" />
+    <Compile Include="BaseModelImpl\ModelConverterImpl\SensorListConverter.cs" />
+    <Compile Include="BaseModelImpl\ModelConverterImpl\SerialConverter.cs" />
+    <Compile Include="BaseModelImpl\ModelConverterImpl\TimeConverter.cs" />
+    <Compile Include="BaseModelImpl\ModelConverterImpl\URLConverter.cs" />
+    <Compile Include="ModelProtocolServiceImpl\BasicService.cs" />
+    <Compile Include="ModelProtocolServiceImpl\ClockService.cs" />
+    <Compile Include="ModelProtocolServiceImpl\ConfigurationService.cs" />
+    <Compile Include="ModelProtocolServiceImpl\Convert\PDSensorConverter.cs" />
+    <Compile Include="ModelProtocolServiceImpl\Convert\PDTimeConverter.cs" />
+    <Compile Include="ModelProtocolServiceImpl\HandShakeService.cs" />
+    <Compile Include="ModelProtocolServiceImpl\LoggerService.cs" />
+    <Compile Include="ModelProtocolServiceImpl\ModemService.cs" />
+    <Compile Include="ModelProtocolServiceImpl\NetworkService.cs" />
+    <Compile Include="ModelProtocolServiceImpl\PowerService.cs" />
+    <Compile Include="ModelProtocolServiceImpl\ProbeInfoService.cs" />
+    <Compile Include="ModelProtocolServiceImpl\SensorTestService.cs" />
+    <Compile Include="ModelProtocolServiceImpl\TimeParser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProtocolImpl\FrameMapper.cs" />
+    <Compile Include="ProtocolImpl\ProtocolContext.cs" />
+    <Compile Include="ProtocolImpl\Request.cs" />
+    <Compile Include="ProtocolImpl\Response.cs" />
+    <Compile Include="ProtocolImpl\Util\Clarity.cs" />
+    <Compile Include="ProtocolImpl\Util\CRCHelper.cs" />
+    <Compile Include="Status\ExceptionEventArgs.cs" />
+    <Compile Include="Status\ExceptionManager.cs" />
+    <Compile Include="Status\IHandleException.cs" />
+    <Compile Include="Status\IProcessStatus.cs" />
+    <Compile Include="Status\ProcessEventArgs.cs" />
+    <Compile Include="Status\StatusManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConfigFrame\ConfigFrame.csproj">
+      <Project>{03BD87B8-1BD4-4969-9839-4DE7EFA65DE0}</Project>
+      <Name>ConfigFrame</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PConfigProtocol\PConfigProtocol.csproj">
+      <Project>{7289B06F-E3D3-4CF5-B2E3-132B2C598525}</Project>
+      <Name>PConfigProtocol</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProtocolFrame\ProtocolFrame.csproj">
+      <Project>{EED184AE-D528-4245-B89A-4D29708FB09C}</Project>
+      <Name>ProtocolFrame</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
